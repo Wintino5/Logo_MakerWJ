@@ -6,7 +6,7 @@ In this project we created a logo makerusing JavaScript and Node JS. This applic
 
 ## Repository
 
-Link to deployed video:
+Link to deployed video: https://drive.google.com/file/d/1gCPzd9V3gP-3PM-UdEj5v05l2lKI0_Tq/view
 
 ## Technologies
 
