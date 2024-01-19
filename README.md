@@ -6,7 +6,7 @@ In this project we created a logo makerusing JavaScript and Node JS. This applic
 
 ## Repository
 
-Link to deployed code:
+Link to deployed video:
 
 ## Technologies
 
@@ -20,4 +20,4 @@ MIT License
 
 The following image shows the application's functionality and appearance:
 
-![This app creates a logo.]()
+![This app creates a logo.](./images/LogoMaker.png)

@@ -36,13 +36,13 @@ async function questions() {
             userShape = new Square(text, textColor, 75, 90);
             break;
         case 'Circle':
-            userShape = new Circle(text, textColor, 50, 75);
+            userShape = new Circle(text, textColor, 150, 120);
             break;
         case 'Triangle':
-            userShape = new Triangle(text, textColor);
+            userShape = new Triangle(text, textColor, 150, 145);
             break;
         default:
-            userShape = new Circle(text, textColor, 50, 75);
+            userShape = new Circle(text, textColor, 150, 120);
     }
     
     userShape.setColor(shapeColor);
