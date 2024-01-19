@@ -1,6 +1,6 @@
 const inquirer = require('inquirer'); 
 const fs = require('fs');
-const { Square, Circle } = require('./lib/shapes')
+const { Square, Circle, Triangle } = require('./lib/shapes')
 // const generateLogo = require('./lib/generatelogo');
 // const Shape = require('./lib/Shape');
 async function questions() {
@@ -32,14 +32,17 @@ async function questions() {
     let userShape;
     
     switch(shape) {
-        case 'Circle':
-            userShape = new Circle(text, textColor, 50, 75);
-            break;
         case 'Square':
             userShape = new Square(text, textColor, 75, 90);
             break;
-        default:
+        case 'Circle':
+            userShape = new Circle(text, textColor, 50, 75);
+            break;
+        case 'Triangle':
             userShape = new Triangle(text, textColor);
+            break;
+        default:
+            userShape = new Circle(text, textColor, 50, 75);
     }
     
     userShape.setColor(shapeColor);
@@ -51,7 +54,7 @@ async function questions() {
 async function generateSVG(userShape) {
     const svgCode = `<svg version="1.1" width="300" height="200">
         ${userShape.render()}
-        <text x="150" y="125" font-size="60" text-anchor="middle" fill="${userShape.textColor}">${userShape.text}</text>
+        <text x="${userShape.textX}" y="${userShape.textY}" font-size="60" text-anchor="middle" fill="${userShape.textColor}">${userShape.text}</text>
     </svg>`
 
     await fs.promises.writeFile('./logo.svg', svgCode);
